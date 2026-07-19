@@ -30,6 +30,8 @@ export function BattleProvider({ children }) {
 
       const data = await battleService.create(problem);
 
+      console.log("Battle response:", data);
+
       setBattle(data);
 
       setHistory((prev) => [data, ...prev]);

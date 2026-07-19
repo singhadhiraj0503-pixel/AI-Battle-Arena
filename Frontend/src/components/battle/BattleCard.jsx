@@ -4,11 +4,13 @@ import BattleHeader from "./BattleHeader";
 import SolutionCard from "./SolutionCard";
 import JudgeCard from "./JudgeCard";
 
-import BattleLoading from "./BattleLoading";
 import BattleFooter from "./BattleFooter";
+import BattleLoading from "./BattleLoading";
 
 export default function BattleCard({ battle }) {
-  if (!battle) return null;
+  if (!battle || !battle.judge) {
+    return <BattleLoading />;
+  }
 
   return (
     <>
@@ -38,7 +40,7 @@ export default function BattleCard({ battle }) {
 
       {/* Footer */}
 
-      <BattleFooterr battle={battle} />
+      <BattleFooter battle={battle} />
     </>
   );
 }

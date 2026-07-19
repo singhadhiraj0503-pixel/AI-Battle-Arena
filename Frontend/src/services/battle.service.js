@@ -5,7 +5,7 @@ const battleService = {
   async create(problem) {
     const { data } = await api.post(ENDPOINTS.CREATE_BATTLE, { problem });
 
-    return data;
+    return data.data;
   },
 
   async get(id) {
