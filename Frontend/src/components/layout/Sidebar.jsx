@@ -28,7 +28,7 @@ const menuItems = [
 
 export default function Sidebar() {
   return (
-    <aside className="flex w-72 flex-col border-r border-slate-200 bg-white">
+    <aside className="flex w-72 flex-col gap-5 text-center border-r border-slate-200 bg-white">
       {/* Top */}
 
       <div className="p-7">
@@ -46,7 +46,7 @@ export default function Sidebar() {
           return (
             <button
               key={item.title}
-              className={`mb-3 flex w-full items-center gap-4 rounded-xl px-4 py-4 transition
+              className={`mx-3 flex w-full items-center text-[0.9 rem] gap-4 rounded-md px-4 py-4 transition
                 ${
                   item.active
                     ? "bg-indigo-100 text-indigo-700"
@@ -64,20 +64,20 @@ export default function Sidebar() {
       {/* Upgrade */}
 
       <div className="p-5">
-        <button className="w-full rounded-xl bg-black py-4 font-medium text-white transition hover:bg-slate-800">
+        <button className="w-full rounded-md bg-black py-4 font-medium text-white transition hover:bg-slate-800">
           Upgrade to Pro
         </button>
       </div>
 
       {/* Bottom */}
 
-      <div className="border-t p-5">
-        <button className="mb-3 flex items-center gap-3 text-slate-500 hover:text-black">
+      <div className="border-t p-5 h-30">
+        <button className="mb-3 flex items-center gap-5 text-slate-500 hover:text-black">
           <CircleHelp size={18} />
           Docs
         </button>
 
-        <button className="flex items-center gap-3 text-slate-500 hover:text-black">
+        <button className="flex items-center gap-5 text-slate-500 hover:text-black">
           <CircleHelp size={18} />
           Support
         </button>

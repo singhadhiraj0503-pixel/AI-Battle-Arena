@@ -1,10 +1,16 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./app/App.jsx";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+import router from "./routes/router";
+
+import "./index.css";
+import { BattleProvider } from "./context/BattleContext";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BattleProvider>
+      <RouterProvider router={router} />
+    </BattleProvider>
+  </React.StrictMode>,
 );
